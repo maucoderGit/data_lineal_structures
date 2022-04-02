@@ -15,7 +15,7 @@ class Array:
         return iter(self.items)
 
     def __getitem__(self, index):
-        return self.item[index]
+        return self.items[index]
 
     def __setitem__(self, index, new_item):
         self.items[index] = new_item
