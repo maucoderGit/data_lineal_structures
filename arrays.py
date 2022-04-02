@@ -1,9 +1,19 @@
+from random import randint
+
 class Array:
 
     def __init__(self, capacity, fill_value=None):
+        self.capacity = capacity
         self.items = list()
         for i in range(capacity):
             self.items.append(fill_value)
+
+    def __randreplace__(self, lower_random, upper_random) -> list:
+        """
+        Set a random int value in range[lower_random, upper_random] and return new list.
+        """
+        return [self.__setitem__(i, randint(lower_random, upper_random)) for i in range(self.__len__())]
+        
 
     def __len__(self):
         return len(self.items)
@@ -19,3 +29,6 @@ class Array:
 
     def __setitem__(self, index, new_item):
         self.items[index] = new_item
+
+    def __sumelements__(self):
+        pass
