@@ -1,4 +1,5 @@
 from arrays import Array
+from random import randint
 
 class Grid():
     def __init__(self, rows, colums, fill_value= None):
@@ -14,6 +15,13 @@ class Grid():
 
     def __getitem__(self, index):
         return self.data[index]
+
+    def __setitem__(self, row, column, value):
+        self.data[row][column] = value
+
+    def __setRandints__(self):
+        for i in range(self.get_height()):
+            self.data[i] = [randint(0, self.get_width()) for i in range(self.get_width())]                
 
     def __str__(self):
         result = ""
