@@ -1,4 +1,5 @@
 from random import randint
+from functools import reduce
 
 class Array:
 
@@ -14,7 +15,6 @@ class Array:
         """
         return [self.__setitem__(i, randint(lower_random, upper_random)) for i in range(self.__len__())]
         
-
     def __len__(self):
         return len(self.items)
 
@@ -31,4 +31,4 @@ class Array:
         self.items[index] = new_item
 
     def __sumelements__(self):
-        pass
+        return reduce(lambda a, b: a + b, self.items)
