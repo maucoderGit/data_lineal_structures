@@ -20,7 +20,7 @@ class Grid():
 
         for row in range(self.get_height()):
             for column in range(self.get_width()):
-                result += str(self.data[row][column])
+                result += str(self.data[row][column]) + " "
             
             result += "\n"
         
