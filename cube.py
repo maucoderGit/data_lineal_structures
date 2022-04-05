@@ -3,12 +3,11 @@ from arrays import Array
 class Cube():
 
     def __init__(self, rows, columns, depth, fill_value = None):
-        for i in range(rows):
-            self.cube = Array(rows)
-            for row in range(rows):
-                self.cube[row] = Array(columns, fill_value)
-                for columns in range(columns):
-                    self.cube[row][columns] = Array(depth, fill_value)
+        """
+        Create tri-dimentional Arrays
+        Giving numbers of rows, columns and depth to get an Array
+        """
+        self.cube = [Array(columns, Array(depth)) for i in range(rows)]
 
     def get_height(self):
         return len(self.cube)
@@ -31,7 +30,7 @@ class Cube():
         for row in range(self.get_height()):
             for column in range(self.get_width()):
                 for depth in range(self.get_depth()):
-                    result += str(self.data[row][column][depth]) + " "
+                    result += str(self.cube[row][column][depth]) + " "
             
             result += "\n"
         

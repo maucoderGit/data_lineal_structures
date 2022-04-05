@@ -3,7 +3,7 @@ from functools import reduce
 
 class Array:
 
-    def __init__(self, capacity, fill_value=None):
+    def __init__(self, capacity: int, fill_value=None):
         self.capacity = capacity
         self.items = list()
         for i in range(capacity):
