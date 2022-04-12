@@ -4,8 +4,8 @@ class Cube():
 
     def __init__(self, rows, columns, depth, fill_value = None):
         """
-        Create tri-dimentional Arrays
-        Giving numbers of rows, columns and depth to get an Array
+        Create tri-dimensional Arrays
+        Giving numbers of rows, columns, and depth to get an Array
         """
         self.cube = [Array(columns, Array(depth)) for i in range(rows)]
 
@@ -23,7 +23,7 @@ class Cube():
 
     def __str__(self):
         """
-        Return string values from tri-dimentional array
+        Return string values from a tri-dimensional array
         """
         result = ""
 
@@ -35,4 +35,3 @@ class Cube():
             result += "\n"
         
         return str(result)
-        

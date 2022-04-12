@@ -5,7 +5,7 @@ class Array:
 
     def __init__(self, capacity: int, fill_value=None):
         self.capacity = capacity
-        self.items = list()
+        self.items = []
         for i in range(capacity):
             self.items.append(fill_value)
 
